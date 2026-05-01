@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fintech-dark: #0f172a;
+  --color-fintech-card: #1e293b;
+  --color-fintech-text: #f8fafc;
+  --color-fintech-accent: #3b82f6;
+  --color-fintech-green: #10b981;
+  --color-fintech-red: #ef4444;
+}
+
+body {
+  background-color: var(--color-fintech-dark);
+  color: var(--color-fintech-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
