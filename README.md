@@ -40,7 +40,7 @@ brew install ta-lib
 ```bash
 export TA_INCLUDE_PATH="$(brew --prefix ta-lib)/include"
 export TA_LIBRARY_PATH="$(brew --prefix ta-lib)/lib"
-pip install --no-cache-dir ta-lib==0.4.28
+pip install --no-cache-dir ta-lib==0.6.8
 ```
 
 ## Installation & Setup
