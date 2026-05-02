@@ -4,3 +4,5 @@ __pycache__/
 node_modules/
 dist/
 .env
+ta-lib/
+ta-lib-0.4.0-src.tar.gz
