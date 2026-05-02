@@ -3,12 +3,12 @@ uvicorn==0.27.1
 pydantic==2.6.1
 pandas==2.2.0
 numpy==1.26.4
-fyers-apiv3==3.0.4
+fyers-apiv3==3.1.12
 python-dotenv==1.0.1
 sqlalchemy==2.0.27
 python-jose==3.3.0
 passlib==1.7.4
 bcrypt==4.1.2
 python-multipart==0.0.9
-ta-lib==0.4.28 ; sys_platform != 'win32'
+ta-lib==0.6.8 ; sys_platform != 'win32'
 ccxt==4.2.14
