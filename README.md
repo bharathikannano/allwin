@@ -28,7 +28,20 @@ make
 sudo make install
 ```
 
-*(Note: MacOS users can typically install this via `brew install ta-lib`)*
+### Installing TA-Lib C Library (macOS)
+
+If you are on macOS (especially Apple Silicon / M1 / M2 Macs), you may encounter a **"segmentation fault"** if TA-Lib is not compiled with the correct architecture flags. Follow these steps:
+
+1. Install the C library using Homebrew:
+```bash
+brew install ta-lib
+```
+2. When installing the Python dependencies later, you must explicitly provide the Homebrew paths so the Python wrapper links correctly:
+```bash
+export TA_INCLUDE_PATH="$(brew --prefix ta-lib)/include"
+export TA_LIBRARY_PATH="$(brew --prefix ta-lib)/lib"
+pip install --no-cache-dir ta-lib==0.6.8
+```
 
 ## Installation & Setup
 
