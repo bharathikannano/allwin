@@ -34,7 +34,7 @@ sudo make install
 
 We have provided convenient scripts to install and run both the frontend and backend simultaneously in one command.
 
-### 1. Installation
+### 1. Automated Installation
 
 To install all dependencies for both the backend (Python virtual environment and packages) and frontend (Node modules), run the provided installation script:
 
@@ -46,7 +46,25 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### 2. Starting the Application
+### 2. Manual Installation
+
+If you prefer to install dependencies manually without the script, follow these steps:
+
+#### Backend
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+#### Frontend
+```bash
+cd frontend
+npm install
+```
+
+### 3. Starting the Application
 
 To start both the backend API server (FastAPI on Uvicorn) and the frontend development server (Vite) concurrently, run:
 
