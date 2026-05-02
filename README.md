@@ -11,7 +11,7 @@ A high-performance full-stack trading dashboard for Indian markets with backtest
 
 Before running the project, you must have the following installed on your machine:
 
-1. **Python 3.8+**
+1. **Python 3.8 to 3.12** (Python 3.13+ is not currently supported due to TA-Lib C-API changes)
 2. **Node.js (18+) and npm**
 3. **TA-Lib C Library** (Required for technical analysis calculations in the backend).
 
@@ -40,7 +40,7 @@ brew install ta-lib
 ```bash
 export TA_INCLUDE_PATH="$(brew --prefix ta-lib)/include"
 export TA_LIBRARY_PATH="$(brew --prefix ta-lib)/lib"
-pip install --no-cache-dir ta-lib==0.6.8
+pip install --no-cache-dir ta-lib==0.4.28
 ```
 
 ## Installation & Setup
