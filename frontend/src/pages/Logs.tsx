@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getTradeLogs } from '../services/api';
 
 export default function Logs() {
-  const [logs, setLogs] = useState<any[]>([]);
+  const [logs, setLogs] = useState<Record<string, any>[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
