@@ -32,31 +32,48 @@ sudo make install
 
 ## Installation & Setup
 
-We have provided convenient scripts to install and run both the frontend and backend simultaneously in one command.
+Follow these steps to set up and run the application.
 
-### 1. Installation
+### 1. Backend Installation
 
-To install all dependencies for both the backend (Python virtual environment and packages) and frontend (Node modules), run the provided installation script:
-
-```bash
-# Make the script executable if it isn't already
-chmod +x install.sh
-
-# Run the install script
-./install.sh
-```
-
-### 2. Starting the Application
-
-To start both the backend API server (FastAPI on Uvicorn) and the frontend development server (Vite) concurrently, run:
+Open a terminal, navigate to the `backend` folder, and run the following commands to create a virtual environment and install dependencies:
 
 ```bash
-# Make the script executable if it isn't already
-chmod +x start.sh
-
-# Run the start script
-./start.sh
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
+
+### 2. Frontend Installation
+
+Open a new terminal window, navigate to the `frontend` folder, and install the Node dependencies:
+
+```bash
+cd frontend
+npm install
+```
+
+### 3. Starting the Application
+
+You need to run both the backend and frontend servers simultaneously.
+
+**Start the Backend:**
+In your backend terminal (with the virtual environment activated):
+```bash
+cd backend
+export PYTHONPATH=$(pwd)
+uvicorn app.main:app
+```
+
+**Start the Frontend:**
+In your frontend terminal:
+```bash
+cd frontend
+npm run dev
+```
+
+*(Optional: If you are on a Mac/Linux machine with `bash` available, you can alternatively use `./install.sh` and `./start.sh` from the root directory to automate these steps).*
 
 The frontend will be available at `http://localhost:5173` and the backend API at `http://localhost:8000`.
 
