@@ -12,7 +12,7 @@ export const getTradeLogs = async () => {
   return response.data;
 };
 
-export const runBacktest = async (data: any) => {
+export const runBacktest = async (data: unknown) => {
   const response = await axios.post(`${API_BASE_URL}/backtest/run`, data);
   return response.data;
 };

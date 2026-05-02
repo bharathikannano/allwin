@@ -13,7 +13,7 @@ const chartData = [
 ];
 
 export default function Dashboard() {
-  const [summary, setSummary] = useState<any>(null);
+  const [summary, setSummary] = useState<Record<string, any> | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
